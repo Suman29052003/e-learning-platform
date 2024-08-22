@@ -2,31 +2,39 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="w-full p-4 border-b-2 border-gray-200 shadow-sm flex items-center justify-around">
-      {/*logo*/}
-      <div className="logo w-[250px]">
-        <span className="font-[Ubuntu] text-4xl font-semibold text-[#0358d2] cursor-pointer">
+    <nav className="w-full p-4 border-b-2 border-gray-200 shadow-sm flex items-center justify-between md:justify-around flex-wrap">
+      {/* Logo */}
+      <div className="logo w-auto mb-2 md:mb-0">
+        <span className="font-[Ubuntu] text-3xl md:text-4xl font-semibold text-[#0358d2] cursor-pointer">
           EduQuest
         </span>
       </div>
-      {/*search bar*/}
-      <div className="search-bar w-[30%] flex border-2 border-gray-200 p-2 rounded-full">
+
+      {/* Search Bar */}
+      <div className="search-bar w-full md:w-[30%] flex border-2 border-gray-200 p-2 rounded-full mb-2 md:mb-0">
         <input
           type="text"
           className="w-full bg-transparent border-0 outline-none ml-3"
-          placeholder="search courses ..."
+          placeholder="Search courses ..."
         />
-        <span class="material-symbols-outlined text-[2rem] bg-[#0358d2] text-white rounded-full p-[5px]">
+        <span className="material-symbols-outlined text-[1.5rem] md:text-[2rem] bg-[#0358d2] text-white rounded-full p-[5px] cursor-pointer">
           search
         </span>
       </div>
-      {/*nav links*/}
-      <div className="nav-links  ">
-        <ul className="flex gap-6 items-center justify-center">
-          <li className=" cursor-pointer text-[#8f7979] hover:text-[#0358d2]">Online Degrees</li>
-          <li className=" cursor-pointer text-[#8f7979] hover:text-[#0358d2]">Find Your New Career</li>
-          <li className=" cursor-pointer">
-            <button className="bg-[#0358d2] p-3 rounded-lg font-medium text-lg text-white">Log In</button>
+
+      {/* Nav Links */}
+      <div className="nav-links w-full md:w-auto flex items-center justify-center md:justify-between flex-wrap">
+        <ul className="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center">
+          <li className="cursor-pointer text-[#8f7979] hover:text-[#0358d2] text-center">
+            Online Degrees
+          </li>
+          <li className="cursor-pointer text-[#8f7979] hover:text-[#0358d2] text-center">
+            Find Your New Career
+          </li>
+          <li className="cursor-pointer">
+            <button className="bg-[#0358d2] p-2 md:p-3 rounded-lg font-medium text-lg text-white w-full md:w-auto">
+              Log In
+            </button>
           </li>
         </ul>
       </div>

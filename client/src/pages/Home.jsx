@@ -4,6 +4,9 @@ import Banner from '../components/Banner'
 import Collaboration from '../components/Collaboration'
 import Certification from '../components/Certification'
 import Outcomes from '../components/Outcomes'
+import Feedback from '../components/Feedback'
+import Nextstep from '../components/Nextstep'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -13,6 +16,9 @@ const Home = () => {
       <Collaboration/>
       <Certification/>
       <Outcomes/>
+      <Feedback/>
+      <Nextstep/>
+      <Footer/>
     </div>
   )
 }
