@@ -1,0 +1,90 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.DS_Store
+
+# Dependency directories
+node_modules/
+jspm_packages/
+!jspm_packages/.gitkeep
+
+# Optional npm cache directory
+.npm
+
+# Build directories
+dist/
+build/
+.eslintcache
+.parcel-cache
+.next/
+out/
+.cache/
+
+# Testing
+coverage/
+*.lcov
+
+# Environment Variables
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# MacOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Frontend specific
+/public/static/
+public/assets/
+public/build/
+
+# Backend specific
+tmp/
+logs/
+*.log
+
+# Ignore generated documentation files
+docs/
+
+# Docker files
+Dockerfile
+Dockerfile.*
+docker-compose.yml
+.dockerignore
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Security
+*.pem
+*.key
+*.crt

@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import FormDialog from "../components/FormDialog";
 import Home from "./Home";
 import axios from 'axios'
+import { useToast } from "../context/ToastProvider";
 
 
-const Login = () => {
+const Signup = () => {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
+  const { showToast } = useToast();
 
   useEffect(() => {
     // Open the dialog when the component mounts
@@ -23,16 +25,19 @@ const Login = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
+    const fullName = formJson.fullName;
     const email = formJson.email;
     const password = formJson.password;
 
     try {
-      const response = await axios.post("http://localhost:3000/api/user/login", {
+      const response = await axios.post("http://localhost:3000/api/user/signup", {
+        fullName,
         email,
         password,
       });
-      console.log(response.data); // Handle successful response
-      localStorage.setItem('token', response.data.token); // Store token
+      console.log(response.data);   // Handle successful response
+      navigate('/login') 
+      showToast(response.data.message)
       handleClose();
     } catch (error) {
       console.error(error); // Handle error
@@ -40,25 +45,26 @@ const Login = () => {
   };
 
   return (
-  <>
-  <Home/>
+    <>
+    <Home/>
     <FormDialog
       open={open}
       setOpen={setOpen}
-      title="Welcome Back"
-      submitLabel="Log In"
+      title="Sign Up"
+      submitLabel="Sign Up"
       fields={[
+        { id: "fullName", label: "Full Name", type: "text", required: true },
         { id: "email", label: "Email Address", type: "email", required: true },
         { id: "password", label: "Password", type: "password", required: true },
       ]}
       handleSubmit={handleSubmit}
       footerLink={{
-        label: "New to EduQuest? Sign Up",
-        onClick: () => navigate("/signup"), // Navigate to signup route
+        label: "Already have an account? Sign In",
+        onClick: () => navigate("/login"), // Navigate to login route
       }}
     />
-    </>
+</>
   );
 };
 
-export default Login;
+export default Signup;
