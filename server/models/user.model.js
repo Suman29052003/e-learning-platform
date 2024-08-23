@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,
+        unique: true
     },
     // phoneNumber: {
     //     type: Number,
@@ -37,14 +38,8 @@ userSchema.pre('save', async function (next) {
     }
 })
 
-userSchema.methods.comparePassword = async function (enteredPassword) {
-    try {
-        const isValid = await bcrypt.compare(this.password, enteredPassword);
-        return isValid;
-    } catch (error) {
-        next(error)
-    }
-}
-
+userSchema.methods.comparePassword = async function(enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password);
+};
 const User = mongoose.model('User', userSchema)
 module.exports = User

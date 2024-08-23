@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FormDialog from "../components/FormDialog";
 import Home from "./Home";
 import axios from 'axios'
+import { useToast } from "../context/ToastProvider";
 
 
 const Login = () => {
@@ -19,6 +20,8 @@ const Login = () => {
     navigate("/"); // Redirect to home or another page after closing the dialog
   };
 
+  const { showToast } = useToast();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -32,7 +35,11 @@ const Login = () => {
         password,
       });
       console.log(response.data); // Handle successful response
-      localStorage.setItem('token', response.data.token); // Store token
+      const token = response.data.token
+      localStorage.setItem('token', token); // Store token
+      if(token){
+        showToast(response.data.message)
+      }
       handleClose();
     } catch (error) {
       console.error(error); // Handle error
