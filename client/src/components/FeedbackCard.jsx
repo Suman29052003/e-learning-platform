@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeedbackCard = ({ image, name, country, feedback }) => {
   return (
-    <section className='feedback-card w-full sm:w-[300px] md:w-[320px] min-h-[400px] max-h-[450px] flex flex-col p-6 border border-gray-200 rounded-lg shadow-md'>
+    <section className='feedback-card w-full sm:w-[300px] md:w-[320px] min-h-[450px] max-h-[450px] flex flex-col p-6 border border-gray-200 rounded-lg shadow-md'>
       {/* image */}
       <div className="image w-full mb-4 flex items-center justify-center">
         <img src={image} alt={name} className='w-[80px] h-[80px] rounded-full object-cover' />

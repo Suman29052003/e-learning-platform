@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 const Navbar = () => {
   return (
@@ -32,9 +34,11 @@ const Navbar = () => {
             Find Your New Career
           </li>
           <li className="cursor-pointer">
-            <button className="bg-[#0358d2] p-2 md:p-3 rounded-lg font-medium text-lg text-white w-full md:w-auto">
-              Log In
-            </button>
+            <Link to="/login">
+            <Button variant="outlined" >
+       Log In
+      </Button>
+            </Link>
           </li>
         </ul>
       </div>
