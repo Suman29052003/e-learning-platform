@@ -5,7 +5,25 @@ const courses = [
         title: "Google Data Analytics",
         companyLogo: '/Google-G_360x360.png',
         type: 'Professional Certificate',
-        description: "Master data analysis skills to start a career in data analytics with Google."
+        description: "Master data analysis skills to start a career in data analytics with Google.",
+        level: "Beginner",
+        duration: "6 months (3-5 hours per week)",
+        language: "English",
+        skills: ["Data Analysis", "Spreadsheets", "Data Visualization", "SQL", "R Programming"],
+        rating: 4.8,
+        reviews: 1200,
+        instructor: "John Doe",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand the foundations of data analysis.",
+            "Learn how to use spreadsheets, SQL, and R programming.",
+            "Create data visualizations to communicate your insights.",
+            "Gain skills that are highly sought-after in the job market."
+        ],
+        prerequisites: "None",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This program, created by Google, provides the skills you need for an entry-level data analyst position. Learn at your own pace from top instructors and gain a shareable certificate."
     },
     {
         id: 2,
@@ -13,7 +31,25 @@ const courses = [
         title: "Google Project Management",
         companyLogo: '/Google-G_360x360.png',
         type: 'Professional Certificate',
-        description: "Learn project management essentials to lead projects efficiently with Google's guidance."
+        description: "Learn project management essentials to lead projects efficiently with Google's guidance.",
+        level: "Beginner",
+        duration: "6 months (4-6 hours per week)",
+        language: "English",
+        skills: ["Project Management", "Agile Methodologies", "Risk Management", "Team Leadership"],
+        rating: 4.7,
+        reviews: 1000,
+        instructor: "Jane Smith",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Master project management fundamentals",
+            "Learn Agile and Scrum methodologies",
+            "Develop leadership and communication skills",
+            "Create project plans and manage resources effectively"
+        ],
+        prerequisites: "None",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "Developed by Google, this program equips you with the skills needed for an entry-level project management role. Learn from industry experts and earn a valuable certificate."
     },
     {
         id: 3,
@@ -21,7 +57,25 @@ const courses = [
         title: "Google IT Support",
         companyLogo: '/Google-G_360x360.png',
         type: 'Professional Certificate',
-        description: "Build IT support skills for a career in IT with Google's comprehensive curriculum."
+        description: "Build IT support skills for a career in IT with Google's comprehensive curriculum.",
+        level: "Beginner",
+        duration: "6 months (5-10 hours per week)",
+        language: "English",
+        skills: ["IT Fundamentals", "Networking", "Operating Systems", "System Administration", "Security"],
+        rating: 4.8,
+        reviews: 1500,
+        instructor: "Mike Johnson",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand computer hardware and networking",
+            "Learn about operating systems and system administration",
+            "Develop troubleshooting and customer service skills",
+            "Gain knowledge in cybersecurity and cloud computing"
+        ],
+        prerequisites: "None",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This Google-designed program prepares you for an entry-level role in IT support. Gain hands-on experience with a dynamic curriculum created by Google."
     },
     {
         id: 4,
@@ -29,7 +83,25 @@ const courses = [
         title: "IBM Data Science",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Professional Certificate',
-        description: "Become a data scientist with IBM by learning data analysis, visualization, and machine learning."
+        description: "Become a data scientist with IBM by learning data analysis, visualization, and machine learning.",
+        level: "Intermediate",
+        duration: "11 months (4-6 hours per week)",
+        language: "English",
+        skills: ["Data Science", "Python", "Machine Learning", "Data Visualization", "SQL"],
+        rating: 4.6,
+        reviews: 1800,
+        instructor: "Sarah Lee",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Master data science methodologies and tools",
+            "Learn Python programming for data analysis",
+            "Understand machine learning algorithms",
+            "Create compelling data visualizations"
+        ],
+        prerequisites: "Basic Python or programming knowledge",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "Developed by IBM, this program covers the entire data science process, preparing you for a career in this high-demand field."
     },
     {
         id: 5,
@@ -37,7 +109,25 @@ const courses = [
         title: "Google UX Design",
         companyLogo: '/Google-G_360x360.png',
         type: 'Professional Certificate',
-        description: "Start a career in UX design by mastering design thinking and wireframing with Google's expertise."
+        description: "Start a career in UX design by mastering design thinking and wireframing with Google's expertise.",
+        level: "Beginner",
+        duration: "6 months (5-10 hours per week)",
+        language: "English",
+        skills: ["UX Design", "UI Design", "Wireframing", "Prototyping", "User Research"],
+        rating: 4.8,
+        reviews: 1100,
+        instructor: "Emily Chen",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand UX design principles and processes",
+            "Create wireframes and prototypes",
+            "Conduct user research and usability studies",
+            "Design user-centered interfaces"
+        ],
+        prerequisites: "None",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This Google-created program teaches you the foundations of UX design, preparing you for an entry-level role in this creative and in-demand field."
     },
     {
         id: 6,
@@ -45,7 +135,25 @@ const courses = [
         title: "IBM Data Analyst",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Professional Certificate',
-        description: "Develop essential data analysis skills with IBM for a successful data analytics career."
+        description: "Develop essential data analysis skills with IBM for a successful data analytics career.",
+        level: "Beginner to Intermediate",
+        duration: "7 months (3-5 hours per week)",
+        language: "English",
+        skills: ["Data Analysis", "Excel", "Python", "SQL", "Data Visualization"],
+        rating: 4.7,
+        reviews: 1300,
+        instructor: "David Brown",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Learn data analysis techniques and tools",
+            "Master Excel for data manipulation",
+            "Develop Python programming skills for data analysis",
+            "Create impactful data visualizations"
+        ],
+        prerequisites: "Basic computer literacy",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "IBM's comprehensive program equips you with the skills needed to start a career as a data analyst, covering all essential tools and techniques."
     },
     {
         id: 7,
@@ -53,7 +161,25 @@ const courses = [
         title: "Key Technologies for Business",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Specialization',
-        description: "Understand key technologies transforming businesses with IBM's specialized training."
+        description: "Understand key technologies transforming businesses with IBM's specialized training.",
+        level: "Intermediate",
+        duration: "4 months (4-6 hours per week)",
+        language: "English",
+        skills: ["Cloud Computing", "AI", "Blockchain", "IoT", "Business Strategy"],
+        rating: 4.5,
+        reviews: 800,
+        instructor: "Robert Taylor",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand how emerging technologies impact business",
+            "Learn about cloud computing and its business applications",
+            "Explore AI and machine learning in business contexts",
+            "Discover blockchain and IoT technologies"
+        ],
+        prerequisites: "Basic understanding of business concepts",
+        price: "$49/month",
+        certificate: "Yes",
+        overview: "This IBM specialization helps business professionals understand and leverage key technologies shaping the future of business."
     },
     {
         id: 8,
@@ -61,7 +187,25 @@ const courses = [
         title: "Introduction to Data Science",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Specialization',
-        description: "Explore the foundations of data science and its applications with IBM."
+        description: "Explore the foundations of data science and its applications with IBM.",
+        level: "Beginner",
+        duration: "3 months (4-5 hours per week)",
+        language: "English",
+        skills: ["Data Science", "Python", "Data Analysis", "Statistics", "Machine Learning"],
+        rating: 4.6,
+        reviews: 1000,
+        instructor: "Lisa Wong",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand the basics of data science",
+            "Learn Python programming for data analysis",
+            "Explore statistical concepts and their applications",
+            "Get an introduction to machine learning"
+        ],
+        prerequisites: "Basic math skills",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This IBM specialization provides a comprehensive introduction to data science, covering key concepts and tools for beginners."
     },
     {
         id: 9,
@@ -69,7 +213,25 @@ const courses = [
         title: "Data Science Fundamentals with Python and SQL",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Specialization',
-        description: "Learn the basics of Python and SQL to perform data science tasks effectively."
+        description: "Learn the basics of Python and SQL to perform data science tasks effectively.",
+        level: "Beginner to Intermediate",
+        duration: "5 months (4-6 hours per week)",
+        language: "English",
+        skills: ["Python", "SQL", "Data Analysis", "Database Management", "Data Visualization"],
+        rating: 4.7,
+        reviews: 1200,
+        instructor: "Mark Anderson",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Master Python programming for data science",
+            "Learn SQL for database management and querying",
+            "Perform data analysis using Python and SQL",
+            "Create data visualizations to communicate insights"
+        ],
+        prerequisites: "Basic programming knowledge helpful but not required",
+        price: "$49/month",
+        certificate: "Yes",
+        overview: "This IBM specialization focuses on the fundamental programming skills needed for data science, emphasizing Python and SQL."
     },
     {
         id: 10,
@@ -77,7 +239,25 @@ const courses = [
         title: "Deep Learning",
         companyLogo: '/Icon.png',
         type: 'Specialization',
-        description: "Dive deep into neural networks and advanced AI techniques with this specialization."
+        description: "Dive deep into neural networks and advanced AI techniques with this specialization.",
+        level: "Advanced",
+        duration: "4 months (5-10 hours per week)",
+        language: "English",
+        skills: ["Deep Learning", "Neural Networks", "TensorFlow", "Keras", "Computer Vision"],
+        rating: 4.8,
+        reviews: 2000,
+        instructor: "Andrew Ng",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand the foundations of deep learning",
+            "Build and train neural networks using TensorFlow",
+            "Implement computer vision and natural language processing models",
+            "Apply deep learning to real-world problems"
+        ],
+        prerequisites: "Machine learning experience and strong programming skills",
+        price: "$49/month",
+        certificate: "Yes",
+        overview: "This specialization, taught by AI pioneer Andrew Ng, provides a comprehensive understanding of deep learning techniques and their applications."
     },
     {
         id: 11,
@@ -85,7 +265,25 @@ const courses = [
         title: "IBM AI Foundations for Business",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Specialization',
-        description: "Gain foundational knowledge in AI technologies to apply in business settings."
+        description: "Gain foundational knowledge in AI technologies to apply in business settings.",
+        level: "Intermediate",
+        duration: "3 months (3-5 hours per week)",
+        language: "English",
+        skills: ["Artificial Intelligence", "Machine Learning", "Business Strategy", "Data Analysis"],
+        rating: 4.5,
+        reviews: 900,
+        instructor: "Jessica Lee",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Understand AI concepts and their business applications",
+            "Learn about machine learning and its impact on business",
+            "Explore AI implementation strategies in organizations",
+            "Analyze AI-driven business transformations"
+        ],
+        prerequisites: "Basic understanding of business concepts",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This IBM specialization helps business professionals understand AI technologies and their potential to transform businesses."
     },
     {
         id: 12,
@@ -93,7 +291,25 @@ const courses = [
         title: "IBM DevOps and Software Engineering",
         companyLogo: '/IBM-Logo-Blk---Square.png',
         type: 'Professional Certificate',
-        description: "Learn DevOps practices and software engineering principles with IBM's industry-led curriculum."
+        description: "Learn DevOps practices and software engineering principles with IBM's industry-led curriculum.",
+        level: "Intermediate",
+        duration: "8 months (5-10 hours per week)",
+        language: "English",
+        skills: ["DevOps", "Software Engineering", "Agile Methodologies", "CI/CD", "Cloud Computing"],
+        rating: 4.6,
+        reviews: 1100,
+        instructor: "Michael Clark",
+        enrollment: "Flexible Deadlines",
+        whatYouWillLearn: [
+            "Master DevOps practices and tools",
+            "Learn software engineering principles",
+            "Understand Agile and Scrum methodologies",
+            "Implement CI/CD pipelines"
+        ],
+        prerequisites: "Basic programming knowledge",
+        price: "$39/month",
+        certificate: "Yes",
+        overview: "This IBM professional certificate program provides comprehensive training in DevOps and software engineering, preparing you for a career in this high-demand field."
     }
 ];
 

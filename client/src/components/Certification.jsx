@@ -30,6 +30,7 @@ const Certification = () => {
             return (
               <Cards
                 key={course.id}
+                id={course.id}
                 title={course.title}
                 image={course.image}
                 companyLogo={course.companyLogo}
