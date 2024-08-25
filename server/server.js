@@ -5,6 +5,7 @@ const databaseConnection = require('./database/dbConnection');
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const userRoutes = require('./routes/userRoutes')
+const orderRoutes = require('./routes/orderRoutes')
 dotenv.config()
 const port = process.env.PORT || 8000
 
@@ -15,8 +16,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/api/user', userRoutes)
+app.use('/api/purchase-course',orderRoutes)
 
 app.listen(port, (req, res) => {
     console.log(`Server is running on port ${port}`)
 })
 databaseConnection()
+

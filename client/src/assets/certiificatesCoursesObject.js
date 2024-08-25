@@ -21,7 +21,7 @@ const courses = [
             "Gain skills that are highly sought-after in the job market."
         ],
         prerequisites: "None",
-        price: "$39/month",
+        price: 2900,
         certificate: "Yes",
         overview: "This program, created by Google, provides the skills you need for an entry-level data analyst position. Learn at your own pace from top instructors and gain a shareable certificate."
     },
@@ -47,7 +47,7 @@ const courses = [
             "Create project plans and manage resources effectively"
         ],
         prerequisites: "None",
-        price: "$39/month",
+        price: 3999,
         certificate: "Yes",
         overview: "Developed by Google, this program equips you with the skills needed for an entry-level project management role. Learn from industry experts and earn a valuable certificate."
     },
@@ -73,7 +73,7 @@ const courses = [
             "Gain knowledge in cybersecurity and cloud computing"
         ],
         prerequisites: "None",
-        price: "$39/month",
+        price: 4569,
         certificate: "Yes",
         overview: "This Google-designed program prepares you for an entry-level role in IT support. Gain hands-on experience with a dynamic curriculum created by Google."
     },
@@ -99,7 +99,7 @@ const courses = [
             "Create compelling data visualizations"
         ],
         prerequisites: "Basic Python or programming knowledge",
-        price: "$39/month",
+        price: 5699,
         certificate: "Yes",
         overview: "Developed by IBM, this program covers the entire data science process, preparing you for a career in this high-demand field."
     },
@@ -125,7 +125,7 @@ const courses = [
             "Design user-centered interfaces"
         ],
         prerequisites: "None",
-        price: "$39/month",
+        price: 2333,
         certificate: "Yes",
         overview: "This Google-created program teaches you the foundations of UX design, preparing you for an entry-level role in this creative and in-demand field."
     },
@@ -151,7 +151,7 @@ const courses = [
             "Create impactful data visualizations"
         ],
         prerequisites: "Basic computer literacy",
-        price: "$39/month",
+        price: 6599,
         certificate: "Yes",
         overview: "IBM's comprehensive program equips you with the skills needed to start a career as a data analyst, covering all essential tools and techniques."
     },
@@ -177,7 +177,7 @@ const courses = [
             "Discover blockchain and IoT technologies"
         ],
         prerequisites: "Basic understanding of business concepts",
-        price: "$49/month",
+        price: 1299,
         certificate: "Yes",
         overview: "This IBM specialization helps business professionals understand and leverage key technologies shaping the future of business."
     },
@@ -203,7 +203,7 @@ const courses = [
             "Get an introduction to machine learning"
         ],
         prerequisites: "Basic math skills",
-        price: "$39/month",
+        price: 799,
         certificate: "Yes",
         overview: "This IBM specialization provides a comprehensive introduction to data science, covering key concepts and tools for beginners."
     },
@@ -229,7 +229,7 @@ const courses = [
             "Create data visualizations to communicate insights"
         ],
         prerequisites: "Basic programming knowledge helpful but not required",
-        price: "$49/month",
+        price: 2599,
         certificate: "Yes",
         overview: "This IBM specialization focuses on the fundamental programming skills needed for data science, emphasizing Python and SQL."
     },
@@ -255,7 +255,7 @@ const courses = [
             "Apply deep learning to real-world problems"
         ],
         prerequisites: "Machine learning experience and strong programming skills",
-        price: "$49/month",
+        price: 2499,
         certificate: "Yes",
         overview: "This specialization, taught by AI pioneer Andrew Ng, provides a comprehensive understanding of deep learning techniques and their applications."
     },
@@ -281,7 +281,7 @@ const courses = [
             "Analyze AI-driven business transformations"
         ],
         prerequisites: "Basic understanding of business concepts",
-        price: "$39/month",
+        price: 3999,
         certificate: "Yes",
         overview: "This IBM specialization helps business professionals understand AI technologies and their potential to transform businesses."
     },
@@ -307,7 +307,7 @@ const courses = [
             "Implement CI/CD pipelines"
         ],
         prerequisites: "Basic programming knowledge",
-        price: "$39/month",
+        price: 4999,
         certificate: "Yes",
         overview: "This IBM professional certificate program provides comprehensive training in DevOps and software engineering, preparing you for a career in this high-demand field."
     }
