@@ -1,93 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import courses from "../assets/certiificatesCoursesObject";
+import courses from "../assets/certiificatesCoursesObject"; // Ensure this path is correct
 import Button from "@mui/material/Button";
 import StarIcon from "@mui/icons-material/Star";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import axios from "axios";
 import { useToast } from "../context/ToastProvider";
+import onlineDegrees from "../assets/degreeObject";
+import EnrollButton from "../components/EnrollButton";
 
 const CourseDetail = () => {
   const { showToast } = useToast();
   const navigate = useNavigate();
-
   const [purchased, setPurchased] = useState();
-
+  const { courseId } = useParams();
+  
   useEffect(() => {
     // Scroll to top of the page
     window.scrollTo(0, 0);
-  }, []);
+    console.log("Course ID from URL:", courseId); // Debugging line
+    console.log("Available courses:", courses); // Debugging line
+  }, [courseId]);
 
-  const { courseId } = useParams();
-  const course = courses.find((course) => course.id === parseInt(courseId));
+  const course = [...courses, ...onlineDegrees].find(
+    (item) => item.id === parseInt(courseId)
+  );
 
-  if (!course) return <p>Course not found</p>;
+  if (!course) {
+    return <p>Course not found</p>;
+  }
 
-  const handlePayment = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      if (!token) {
-        showToast("Log in to Proceed");
-        setTimeout(() => {
-          navigate("/login");
-        }, 1000);
-        return;
-      }
-      // Fetch the order from the backend
-      const { data: order } = await axios.post(
-        "http://localhost:3000/api/purchase-course",
-        {
-          amount: course.price, // Course price is passed in rupees
-          currency: "INR", // Make sure this matches the backend
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the request headers
-          },
-        }
-      );
 
-      const paymentId = response.razorpay_payment_id;
-      if (paymentId) {
-        setPurchased(true);
-      } else {
-        setPurchased(false);
-        showToast("Payment failed");
-      }
-
-      const options = {
-        key: "rzp_test_BX3KQ7tc1uJhLX", // Your Razorpay key ID
-        amount: order.amount,
-        currency: order.currency,
-        name: course.title,
-        description: "Course Enrollment",
-        image: course.image,
-        order_id: order.id, // Razorpay order ID returned by the backend
-        handler: function (response) {
-          alert("Payment successful!");
-          console.log("Payment ID:", response.razorpay_payment_id);
-          console.log("Order ID:", response.razorpay_order_id);
-          console.log("Signature:", response.razorpay_signature);
-        },
-        prefill: {
-          name: "Your Name",
-          email: "youremail@example.com",
-          contact: "9999999999",
-        },
-        theme: {
-          color: "#002761",
-        },
-      };
-
-      const rzp = new window.Razorpay(options);
-      rzp.open();
-    } catch (error) {
-      console.error(
-        "Error during payment:",
-        error.response ? error.response.data : error.message
-      );
-    }
-  };
 
   return (
     <div className="course-details w-full min-h-[100vh] py-12 px-4 bg-[#f9f9f9]">
@@ -134,14 +77,7 @@ const CourseDetail = () => {
           <p className="text-lg font-semibold text-[#002761] text-center md:text-left">
             Get started with this course today
           </p>
-          <Button
-            variant="contained"
-            startIcon={<ShoppingCartIcon />}
-            className="bg-[#002761] m-8"
-            onClick={handlePayment}
-          >
-            Enroll Now - {course.price} /-
-          </Button>
+          <EnrollButton course={course} />
         </div>
       </div>
     </div>

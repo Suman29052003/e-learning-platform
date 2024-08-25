@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -6,6 +6,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import EnrollButton from "./EnrollButton";
+import courses from "../assets/certiificatesCoursesObject";
+import onlineDegrees from "../assets/degreeObject";
+
+const getCourse = (id) => {
+  return [...courses, ...onlineDegrees].find((course) => course.id === id);
+};
 
 export default function Cards({
   id,
@@ -16,6 +23,8 @@ export default function Cards({
   desc,
   maxHeight,
 }) {
+  const course = getCourse(id);
+
   return (
     <Card
       sx={{
@@ -24,7 +33,7 @@ export default function Cards({
         height: maxHeight || 500,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between", // Ensures buttons stay at the bottom
+        justifyContent: "space-between",
         padding: 2,
         margin: "auto",
       }}
@@ -51,9 +60,7 @@ export default function Cards({
         className="flex justify-between mt-auto"
         sx={{ paddingTop: 2, paddingBottom: 2 }}
       >
-        <Button size="small" variant="contained" sx={{ marginRight: 1 }}>
-          Enroll
-        </Button>
+        <EnrollButton course={course} cards={true} />
         <Link to={`/course/${id}`}>
           <Button size="small" variant="outlined">
             Learn More

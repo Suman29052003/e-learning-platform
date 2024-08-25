@@ -8,7 +8,8 @@ import OnlineDegree from "./pages/OnlineDegree";
 import Navbar from "./components/Navbar";
 
 import Footer from "./components/Footer";
-import CourseDetail from "./components/CourseDetail";
+import CourseDetail from "./pages/CourseDetail";
+import PaymentSuccess from "./pages/PaymentSuccess";
 
 const App = () => {
   const [openLogin, setOpenLogin] = useState(false);
@@ -24,7 +25,9 @@ const App = () => {
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/degree" element={<OnlineDegree />} />
-            <Route path="/course/:courseId" element={<CourseDetail />} />          </Routes>
+            <Route path="/course/:courseId" element={<CourseDetail />} />        
+            <Route path="/payment-success" element={<PaymentSuccess/>}/>
+            </Routes>
         </div>
           <Footer />
       </Router>

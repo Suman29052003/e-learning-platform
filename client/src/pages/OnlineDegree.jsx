@@ -3,8 +3,10 @@ import onlineDegrees from '../assets/degreeObject'
 import Cards from '../components/Cards'
 import Button from "@mui/material/Button";
 import CarouselComponent from '../components/Carousel';
+import { useParams } from 'react-router-dom';
 
 const OnlineDegree = () => {
+
   const [showMore, setShowMore] = useState(8);
   const onlineDegreesLength = onlineDegrees.slice(0, showMore);
 
@@ -27,6 +29,7 @@ const OnlineDegree = () => {
           {onlineDegreesLength.map((degree, index) => (
             <Cards
               key={index}
+              id={degree.id}
               image={degree.image}
               title={degree.title}
               desc={degree.description}
