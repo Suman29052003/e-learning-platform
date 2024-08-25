@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const razorpayInstance = require('../controllers/razorpayController');
+const jwtAuthMiddleWare = require('../middlewares/jwtAuthMiddleWare');
 
-router.post('/', async (req, res) => {
+router.post('/',jwtAuthMiddleWare, async (req, res) => {
     const { amount, currency = 'INR' } = req.body; // Default to INR if currency is not provided
 
     const options = {
