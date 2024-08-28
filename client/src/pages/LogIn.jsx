@@ -39,6 +39,7 @@ const Login = () => {
       localStorage.setItem('token', token); // Store token
       if(token){
         showToast(response.data.message)
+        window.location.reload()
       }
       handleClose();
     } catch (error) {
